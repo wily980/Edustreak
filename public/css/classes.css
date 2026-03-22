@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  background: #2f7d73;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+}
+
+.menu,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom {
+  margin-bottom: 40px;
+}
+
+.Logo-utama {
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  margin: 15px 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon i {
+  color: #2f7d73;
+  font-size: 18px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.active {
+  background: #0f4f47;
+}
+
+.icon.active i {
+  color: white;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 20px 40px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 5px solid #2f7d73;
+  border-radius: 35px;
+  padding: 15px 20px;
+  width: 500px;
+  background: white;
+}
+
+.search-box i {
+  color: #2f7d73;
+  margin-right: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile span {
+  color: #555;
+  font-size: 20px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.status-icon {
+  background-color: #006d6d;
+  flex-shrink: 0;
+}
+
+.status-icon.box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.status-icon.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/* ================= HEADER ================= */
+.header {
+  margin-top: 20px;
+  background: #1e6f66;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3 0px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.header button {
+  background: white;
+  color: #1e6f66;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================= CLASS LIST ================= */
+.class-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #e5e7eb;
+  border-radius: 15px;
+  padding: 0px 25px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* HEADER CARD */
+.card-header {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.card-header-foto {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.card-header h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #1e6f66;
+}
+
+.card-header h4 {
+  margin: 5px 0 0 0;
+  font-size: 20px;
+  color: #555;
+}
+
+.card-content i {
+  color: #2f7d73;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* LINE */
+.line {
+  width: 100%;
+  height: 3px;
+  background: #2f7d73;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}

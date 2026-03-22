@@ -1,0 +1,391 @@
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f0f4f4;
+  display: flex;
+  min-height: 100vh;
+  color: #1a2e2e;
+}
+
+/* ===================== ICON SIDEBAR ===================== */
+
+.icon-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.icon-sidebar {
+  width: 72px;
+  background-color: #006C67;
+  opacity: 0.78;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 12px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7bbfbf;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icon-box:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.icon-box.active {
+  background-color: #003844;
+  color: #fff;
+}
+
+.icon-box.settings {
+  margin-top: auto;
+  position: absolute;
+  bottom: 24px;
+}
+
+/* ===================== LEFT PANEL ===================== */
+.left-panel {
+  width: 220px;
+  background-color: #006C67;
+  padding: 32px 16px 24px 16px;
+  min-height: 100vh;
+}
+
+.back-btn {
+  color: #ffffff;
+  margin-bottom: 28px;
+  padding-left: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+/* ===================== PROFILE COURSE ===================== */
+.container {
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 9px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .divider {
+      margin: 15px auto;
+      width: 110%;
+      height: 3px;
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 5px;
+    }
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #003844;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.nav-item.active {
+  background: #003844;
+  color: #ffffff;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+.main-content {
+  flex: 1;
+  padding: 24px 32px;
+  background: #f0f4f4;
+  overflow-y: auto;
+}
+
+/* ===================== TOP BAR ===================== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #cde0de;
+  border-radius: 30px;
+  padding: 8px 18px;
+  width: 440px;
+  gap: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+}
+
+.search-icon {
+  color: #6b9e9e;
+  font-size: 15px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a5c5c;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #2e6b6b;
+  border-radius: 50%;
+}
+
+.avatar-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #2e6b6b;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 700;
+  color: #1a2e2e;
+}
+
+/* ===================== ACTION ROW ===================== */
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars .av {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.avatars .av:first-child {
+  margin-left: 0;
+}
+
+.btn-invite {
+  background: #1a4545;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 9px 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s;
+}
+
+.btn-invite:hover {
+  background: #0f2e2e;
+}
+
+.btn-newtask {
+  background: transparent;
+  color: #1a2e2e;
+  border: 2px solid #b0c8c8;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-newtask:hover {
+  background: #e0f0ee;
+  border-color: #2e6b6b;
+}
+
+/* ===================== COLUMN HEADER ===================== */
+.col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.col-label {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a2e2e;
+}
+
+.col-badge {
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.col-badge.dark {
+  background: #1a4545;
+  color: #ffffff;
+}
+
+
+/* ===================== Course ===================== */
+
+.course {
+    display: flex;
+    gap: 30px;
+  }
+
+  /* LEFT SIDE */
+  .left {
+    width: 40%;
+  }
+
+  .course-card {
+    background: #F0F3F6;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .course-title {
+    font-weight: bold;
+  }
+
+  .course-desc {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  /* RIGHT SIDE */
+  .right {
+    width: 60%;
+  }
+
+  .tabs {
+    margin-bottom: 15px;
+  }
+
+  .tabs span {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+
+  .schedule-card {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .date {
+    background: #003844;
+    color: white;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+  }
+
+  .details {
+    background: #F0F3F6;
+    padding: 15px;
+    flex: 1;
+  }
+
+  .title-1 {
+    font-weight: bold;
+  }
+
+  .time, .location {
+    font-size: 13px;
+  }

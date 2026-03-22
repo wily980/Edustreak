@@ -1,0 +1,395 @@
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f0f4f4;
+  display: flex;
+  min-height: 100vh;
+  color: #1a2e2e;
+}
+
+/* ===================== ICON SIDEBAR ===================== */
+.icon-sidebar {
+  width: 72px;
+  background-color: #388C88;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 12px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7bbfbf;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icon-box:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.icon-box.active {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.icon-box.settings {
+  margin-top: auto;
+  position: absolute;
+  bottom: 24px;
+}
+.icon-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===================== LEFT PANEL ===================== */
+.left-panel {
+  width: 220px;
+  background-color: #006C67;
+  padding: 32px 16px 24px 16px;
+  min-height: 100vh;
+}
+
+.panel-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 28px;
+  padding-left: 8px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d0ecec;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.nav-item.active {
+  background: #1f5550;
+  color: #ffffff;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dot.dark {
+  background: #1a3a3a;
+  border: 2px solid #0d2626;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+.main-content {
+  flex: 1;
+  padding: 24px 32px;
+  background: #f0f4f4;
+  overflow-y: auto;
+}
+
+/* ===================== TOP BAR ===================== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #cde0de;
+  border-radius: 30px;
+  padding: 8px 18px;
+  width: 440px;
+  gap: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+}
+
+.search-icon {
+  color: #6b9e9e;
+  font-size: 15px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a5c5c;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #2e6b6b;
+  border-radius: 50%;
+}
+
+.avatar-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #2e6b6b;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 700;
+  color: #1a2e2e;
+}
+
+/* ===================== ACTION ROW ===================== */
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars .av {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.avatars .av:first-child {
+  margin-left: 0;
+}
+
+.btn-invite {
+  background: #1a4545;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 9px 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s;
+}
+
+.btn-invite:hover {
+  background: #0f2e2e;
+}
+
+.btn-newtask {
+  background: transparent;
+  color: #1a2e2e;
+  border: 2px solid #b0c8c8;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-newtask:hover {
+  background: #e0f0ee;
+  border-color: #2e6b6b;
+}
+
+/* ===================== SECTION TITLE ===================== */
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2e7d7d;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #2e7d7d;
+  display: inline-block;
+}
+
+/* ===================== KANBAN BOARD ===================== */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.kanban-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===================== COLUMN HEADER ===================== */
+.col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.col-label {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a2e2e;
+}
+
+.col-badge {
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.col-badge.dark {
+  background: #1a4545;
+  color: #ffffff;
+}
+
+/* ===================== TASK CARD ===================== */
+.task-card {
+  background: #ffffff;
+  border-radius: 14px;
+  height: 150px;
+  padding: 16px 16px 10px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 18px rgba(46,107,107,0.14);
+  transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dot-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3db8a0;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1a2e2e;
+}
+
+.card-desc {
+  font-size: 12.5px;
+  color: #6b8a8a;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.card-divider {
+  height: 2px;
+  background: linear-gradient(to right, #b0d8d4, #d0ecec);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dots {
+  font-size: 16px;
+  font-weight: 900;
+  color: #8aa8a8;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .kanban {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .left-panel {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-sidebar {
+    display: none;
+  }
+  .kanban {
+    grid-template-columns: 1fr;
+  }
+  .search-bar {
+    width: 200px;
+  }
+}

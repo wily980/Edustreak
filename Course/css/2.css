@@ -23,7 +23,8 @@ body {
 
 .icon-sidebar {
   width: 72px;
-  background-color: #388C88;
+  background-color: #006C67;
+  opacity: 0.78;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +52,7 @@ body {
 }
 
 .icon-box.active {
-  background: rgba(255,255,255,0.15);
+  background-color: #003844;
   color: #fff;
 }
 
@@ -307,109 +308,70 @@ body {
   color: #ffffff;
 }
 
-/* ===================== TASK CARD ===================== */
- .course {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
 
-/* ===================== LEFT SIDE ===================== */
+/* ===================== PROGRESS ===================== */
 
-  .left {
-    width: 40%;
-    margin-top: 10px;
-  }
-
-  .course-card {
-    background: #F0F3F6;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-    margin-top: 15px;
-    display: block;
-    text-decoration: none;
-    color: black;
-  }
-
-  .course-title {
-    font-weight: bold;
-  }
-
-  .course-desc {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-
-/* ===================== RIGHT SIDE ===================== */
-
-  .right {
-    width: 60%;
-    margin-top: 10px;
-  }
-
-  .tabs {
-    margin-bottom: 15px;
-  }
-
-  .tabs span {
-    margin-right: 20px;
-    cursor: pointer;
-  }
-
-  .active {
-    font-weight: bold;
-    border-bottom: 2px solid black;
-  }
-
-  .schedule-card {
-    display: flex;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-  }
-
-  .date {
-    background: #003844;
-    color: white;
-    padding: 15px;
-    width: 100px;
-    text-align: center;
-  }
-
-  .details {
-    background: #F0F3F6;
-    padding: 15px;
-    flex: 1;
-  }
-
-  .title-schedule {
-    font-weight: bold;
-  }
-
-  .time, .location {
-    font-size: 13px;
-  }
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 1024px) {
-  .course {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .left-panel {
-    width: 180px;
-  }
+/* PROGRESS */
+.progress-box {
+  background: #0f6b63;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .icon-sidebar {
-    display: none;
-  }
-  .kanban {
-    grid-template-columns: 1fr;
-  }
-  .search-bar {
-    width: 200px;
-  }
+.progress-bar {
+  margin-top: 10px;
+  height: 8px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+.progress-fill {
+  width: 40%;
+  height: 8px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* SECTION */
+.section-title {
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+/* CARD */
+.lesson-card {
+  background: #e5e5e5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 6px 12px rgba(0,0,0,0.2);
+}
+
+/* BUTTON LINK */
+.learn-btn {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: #083f43;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.learn-btn:hover {
+  background: #0f6b63;
+}
+
+.learn-btn:active {
+  transform: scale(0.97);
 }

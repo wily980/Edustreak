@@ -1,2 +1,0 @@
-# Edustreak
-Tugas STS
